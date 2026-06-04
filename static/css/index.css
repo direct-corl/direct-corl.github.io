@@ -1,26 +1,47 @@
 /* Modern CSS Variables for consistent theming */
 :root {
-  --primary-color: #2563eb;
-  --primary-hover: #1d4ed8;
-  --secondary-color: #64748b;
-  --accent-color: #0ea5e9;
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --text-light: #94a3b8;
+  /* DIRECT palette: #0d2d46 navy · #86d176 green · #5371c2 blue · #9cbbe1 light blue */
+  --primary-color: #5371c2;
+  --primary-hover: #0d2d46;
+  --secondary-color: #5371c2;
+  --accent-color: #86d176;
+  --text-primary: #0d2d46;
+  --text-secondary: #51607a;
+  --text-light: #9cbbe1;
   --background-primary: #ffffff;
-  --background-secondary: #f8fafc;
-  --background-accent: #f1f5f9;
-  --border-color: #e2e8f0;
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-subtle: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  --background-secondary: #f5f8fc;
+  --background-accent: #eef3fb;
+  --border-color: #d6e3f3;
+  --shadow-sm: 0 1px 2px 0 rgb(13 45 70 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(13 45 70 / 0.08), 0 2px 4px -2px rgb(13 45 70 / 0.08);
+  --shadow-lg: 0 10px 15px -3px rgb(13 45 70 / 0.08), 0 4px 6px -4px rgb(13 45 70 / 0.08);
+  --shadow-xl: 0 20px 25px -5px rgb(13 45 70 / 0.1), 0 8px 10px -6px rgb(13 45 70 / 0.1);
+  --gradient-primary: linear-gradient(135deg, #5371c2 0%, #0d2d46 100%);
+  --gradient-accent: linear-gradient(135deg, #5371c2 0%, #86d176 100%);
+  --gradient-subtle: linear-gradient(135deg, #9cbbe1 0%, #86d176 100%);
   --border-radius: 12px;
   --border-radius-lg: 16px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Monospace = JetBrains Mono */
+pre, code, .bibtex-header + pre, #bibtex-code, #bibtex-code code {
+  font-family: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace !important;
+}
+
+/* Dark buttons use the deep navy */
+.button.is-dark {
+  background: #0d2d46 !important;
+  border-color: #0d2d46 !important;
+}
+.button.is-dark:hover {
+  background: #5371c2 !important;
+  border-color: #5371c2 !important;
+}
+
+/* Green accent for the title underline */
+.title.is-3::after {
+  background: #86d176 !important;
 }
 
 /* Smooth scrolling for better UX */
@@ -104,12 +125,24 @@ body {
 }
 
 .teaser .hero-body {
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .teaser {
   font-family: 'Inter', sans-serif;
+}
+
+/* Keep the full video frame visible without scrolling */
+.teaser video#teaser {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 72vh;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  object-fit: contain;
 }
 
 
