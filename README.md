@@ -1,80 +1,49 @@
-# Academic Project Page Template
+# DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?
 
-> **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
+Project page for **DIRECT**, a routing framework that allocates test-time compute per task
+for embodied VLM planners — matching a stronger model's success at up to **65% lower latency**
+across chain-of-thought depth, model size, and memory history.
 
-A clean, responsive template for academic project pages.
+> Paper submitted to CoRL 2026. Author, paper, code, and citation details are omitted here
+> to preserve anonymity during review.
 
+🔗 Live site: https://direct-corl.github.io
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
+## What's on the page
 
+- **Video overview** — narrated walkthrough of the method and results, with a collapsible transcript.
+- **Abstract** — the paper's abstract.
+- **Three Axes, Three Distinct Gains** — chain-of-thought, model size, and memory.
+- **How DIRECT Works** — the lightweight router and its inference pipeline.
+- **Key Results** — simulation (VLABench, RoboMME) and hardware (Franka DROID) results.
+- **Hardware Demos** — link to the interactive demos at https://direct-corl.github.io/video-demos-html/
 
+## Repository layout
 
-## Start using the template
-To start using the template click on `Use this Template`.
+- `index.html` — the full single-page site.
+- `static/css/` — styles (`index.css` plus Bulma and component CSS).
+- `static/js/` — page scripts (carousel, slider, etc.).
+- `static/videos/` — the video overview (`direct_corl_2026_video.mp4`) and its `transcript.txt`.
+- `static/images/` — figures, hero graphic, and social preview image.
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+## Local development
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+It's a static site — open `index.html` directly, or serve the folder:
 
-## What's New
+```bash
+python3 -m http.server 8000
+# then visit http://localhost:8000
+```
 
-- Modern, clean design with better mobile support
-- Improved SEO with proper meta tags and structured data
-- Performance improvements (lazy loading, optimized assets)
-- More Works dropdown
-- Copy button for BibTeX citations
-- Better accessibility
+## Deployment
 
-## Components
-
-- Teaser video
-- Image carousel
-- YouTube video embedding
-- Video carousel
-- PDF poster viewer
-- BibTeX citation
-
-## Customization
-
-The HTML file has TODO comments showing what to replace:
-
-- Paper title, authors, institution, conference
-- Links (arXiv, GitHub, etc.)
-- Abstract and descriptions  
-- Videos, images, and PDFs
-- Related works in the dropdown
-- Meta tags for SEO and social sharing
-
-### Meta Tags
-The template includes meta tags for better search engine visibility and social media sharing. These appear in the `<head>` section and help with:
-- Google Scholar indexing
-- Social media previews (Twitter, Facebook, LinkedIn)
-- Search engine optimization
-
-Create a 1200x630px social preview image at `static/images/social_preview.png`.
-
-## Tips
-
-- Compress images with [TinyPNG](https://tinypng.com)
-- Use YouTube for large videos (>10MB)  
-- Replace the favicon in `static/images/`
-- Works with GitHub Pages
+Hosted on GitHub Pages from this repository; pushing to `master` publishes the site.
 
 ## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
 
-## Website License
+Built from the [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template),
+adapted from the [Nerfies](https://nerfies.github.io/) project page.
+
+## License
+
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
